@@ -25,8 +25,11 @@ How to run the Service
 
 URLs
 http://localhost:8080/newsfeed-web/user/sama/articles/list (lists 20 articles from all the feeds user sama is subscribed to)
+
 http://localhost:8080/newsfeed-web/user/sama/feed/1b00564a-479d-46f7-b784-329f03b00df5/subscribe (subscribes user sama to a feed 1b00564a-479d-46f7-b784-329f03b00df5)
+
 http://localhost:8080/newsfeed-web/user/sama/feed/1b00564a-479d-46f7-b784-329f03b00df5/unsubscribe (unsubscribes user sama to a feed 1b00564a-479d-46f7-b784-329f03b00df5)
+
 http://localhost:8080/newsfeed-web//feed/1b00564a-479d-46f7-b784-329f03b00df5/articles/list (list 20 articles from the given feed)
 
 =========================================================================================================================================
