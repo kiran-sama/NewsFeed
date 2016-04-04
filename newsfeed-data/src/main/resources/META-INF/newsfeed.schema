@@ -1,0 +1,5 @@
+create keyspace newsfeed with replication = {'class':'SimpleStrategy','replication_factor':1};
+create table users(username text PRIMARY KEY,email text);
+create table feeds(feedid uuid PRIMARY KEY,feedname text);
+create table feedsbyuser(username text,feedid uuid,feedname text,PRIMARY KEY(username,feedid));
+create table articlesbyfeed(feedid uuid,articleid timeuuid,title text,link text,PRIMARY KEY(feedid, articleid)) WITH CLUSTERING ORDER BY (articleid DESC);
