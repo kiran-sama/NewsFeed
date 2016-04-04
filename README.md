@@ -24,5 +24,8 @@ Requirements
 3. It	should	persist	data	across	restarts
 
 Decisions:
+Chosen Cassandra DB for easy horizontal scalability. It should work well for simple schemas like what we have. It has been used in Instagram, Fasholista for similar systems.Another alternative is Redis DB but cassandra is better as its a low cost and effective solution.
+
+Database design 
 
 
