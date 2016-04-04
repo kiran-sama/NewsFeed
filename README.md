@@ -38,7 +38,7 @@ create table articlesbyfeed(feedid uuid,articleid timeuuid,title text,link text,
 Denormalized the data so that we store all the feeds of a user along with user. Similarly all the articles of a feed or stored with feed.
 
 Scalabality and performance:
-Although we have chosen a strong datastore in cassandra, we could optimize the performance by using a inmemory cache like Redis or memcache. Caching strategey would be to store all certain no of articles feed wise.Cache size is not dependent on User base its only based on no of feeds.We could also identify popular feeds to cache them more effectively.
+Although we have chosen a strong datastore in cassandra, we could optimize the performance by using a inmemory cache like Redis or memcache. Caching strategey would be to store all certain no of articles feed wise.Cache size is not dependent on User base its only based on no of feeds.We could also identify popular feeds to cache them more effectively. Its essentially a pull model from user perspective getting all the articles from different feeds. One other approach is to make it a push model to push articles to user entity so that reading is faster. We have different option which we can decide based on the size of the data
 
 User Authentication:
 We can store userpasswords hashed in datastore and validae user. it can also be integrated with thirdy party systems 
